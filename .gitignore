@@ -1,0 +1,52 @@
+# ───── Python 기본 무시 항목 ─────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# ───── Poetry 가상환경 (로컬 생성 시) ─────
+.venv/
+
+# ───── Django 관련 무시 항목 ─────
+db.sqlite3                     # 기본 SQLite DB (개발용)
+*.log                          # 로그 파일
+*.pot                          # 번역 템플릿 파일
+*.pyc                          # 캐시된 파이썬 파일
+
+# ───── 환경변수 파일 (.env에 DB 정보 등 포함될 수 있음) ─────
+.env
+.env.*
+
+# ───── static/media 파일 (자동 생성, 업로드 등) ─────
+staticfiles/
+media/
+
+# ───── IDE 및 편집기 설정 ─────
+.idea/                         # PyCharm 프로젝트 설정 폴더
+.vscode/                       # VSCode 설정 폴더
+*.iml                          # IntelliJ 기반 IDE 설정 파일
+
+# ───── OS/시스템 관련 무시 항목 ─────
+.DS_Store                      # macOS
+Thumbs.db                     # Windows
+
+# ───── 테스트/빌드/툴 관련 무시 항목 ─────
+*.coverage
+htmlcov/
+.coverage.*
+.cache/
+.pytest_cache/
+.tox/
+dist/
+build/
+*.egg-info/
+
+# ───── MySQL 관련 무시 항목 ─────
+*.sql                          # DB 덤프 파일 (mysqldump 등)
+*.dump                         # DB 백업 파일
+
+# ───── 기타 ─────
+*.swp                          # vim 임시파일
+*.bak
+*.tmp

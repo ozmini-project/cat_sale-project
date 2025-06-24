@@ -1,0 +1,17 @@
+[project]
+name = "cat-sale-project"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "hong-lahee",email = "xhfxhfldwlsk@naver.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django (>=5.2.3,<6.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
