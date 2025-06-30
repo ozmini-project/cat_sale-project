@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'cats.apps.CatsConfig',
     'adoptions.apps.AdoptionsConfig',
+    'rest_framework',
 
 ]
 
@@ -128,3 +129,20 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # settings.py
 AUTH_USER_MODEL = 'users.CustomUser'
 
+import os
+if os.getenv("PRINT_SQL"):
+    LOGGING = {
+        "version": 1,
+        "disable_existing_loggers": False,
+        "handlers": {
+            "console": {
+                "class": "logging.StreamHandler",
+            },
+        },
+        "loggers": {
+            "django.db.backends": {
+                "handlers": ["console"],
+                "level": "DEBUG",
+            },
+        },
+    }
